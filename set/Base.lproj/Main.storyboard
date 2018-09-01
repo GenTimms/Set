@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMr-1v-qjy">
+                                <rect key="frame" x="285" y="20" width="80" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="startNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PfB-b3-YzN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Game Status" lineBreakMode="wordWrap" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-Vx-cVg">
+                                <rect key="frame" x="10" y="20" width="88.5" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWN-0Q-IDx">
+                                <rect key="frame" x="165.5" y="620" width="44" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Cheat"/>
+                                <connections>
+                                    <action selector="cheatButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdV-FM-L4u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYk-N3-vdr">
+                                <rect key="frame" x="180" y="20" width="14" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL4-Xw-1yi" customClass="DealtCardsView" customModule="set" customModuleProvider="target">
+                                <rect key="frame" x="10" y="57" width="355" height="520"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KYk-N3-vdr" firstAttribute="height" secondItem="UMr-1v-qjy" secondAttribute="height" id="C1j-da-y5W"/>
+                            <constraint firstItem="KYk-N3-vdr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CzZ-jK-FBO"/>
+                            <constraint firstItem="JL4-Xw-1yi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Lu0-Zq-GF1"/>
+                            <constraint firstItem="JL4-Xw-1yi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="MtL-d8-fEx"/>
+                            <constraint firstItem="KYk-N3-vdr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="enp-Eo-kCv"/>
+                            <constraint firstItem="bvs-Vx-cVg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f5Q-nB-Dmk"/>
+                            <constraint firstItem="LWN-0Q-IDx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hVb-x0-Br8"/>
+                            <constraint firstItem="UMr-1v-qjy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iRr-aA-zv7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UMr-1v-qjy" secondAttribute="trailing" constant="10" id="ilU-2Y-Alc"/>
+                            <constraint firstItem="bvs-Vx-cVg" firstAttribute="height" secondItem="UMr-1v-qjy" secondAttribute="height" id="nNb-cV-lB3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JL4-Xw-1yi" secondAttribute="bottom" constant="90" id="pHS-I9-PQq"/>
+                            <constraint firstItem="UMr-1v-qjy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KYk-N3-vdr" secondAttribute="trailing" constant="20" id="pdZ-I4-ZY1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JL4-Xw-1yi" secondAttribute="trailing" constant="10" id="rrI-YA-bOY"/>
+                            <constraint firstItem="bvs-Vx-cVg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tSf-Qy-Fcc"/>
+                            <constraint firstItem="bvs-Vx-cVg" firstAttribute="top" secondItem="UMr-1v-qjy" secondAttribute="top" id="yrk-JT-jOK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LWN-0Q-IDx" secondAttribute="bottom" constant="15" id="zAs-MN-rdw"/>
+                            <constraint firstItem="KYk-N3-vdr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bvs-Vx-cVg" secondAttribute="trailing" constant="20" id="zru-Jd-xet"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cheatButton" destination="LWN-0Q-IDx" id="MkW-Bs-fxb"/>
+                        <outlet property="dealtSetCardsView" destination="JL4-Xw-1yi" id="gm2-Gl-zYa"/>
+                        <outlet property="newGameButton" destination="UMr-1v-qjy" id="JKa-U4-l9P"/>
+                        <outlet property="scoreLabel" destination="KYk-N3-vdr" id="mbc-XB-2Ob"/>
+                        <outlet property="statusLabel" destination="bvs-Vx-cVg" id="rlr-qs-Dg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
